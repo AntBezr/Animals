@@ -1,0 +1,7 @@
+.allCards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: linear-gradient(to bottom,#d6d6ff,#609063);
+}

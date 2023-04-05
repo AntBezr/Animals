@@ -1,0 +1,26 @@
+header {
+  margin: 0;
+  padding: 0;
+  background-color:#d6d6ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header h2 {
+  margin: 0;
+  padding: 2rem;
+}
+
+.input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+}
+
+input{
+height: 1rem;
+border-radius: 5px;
+}

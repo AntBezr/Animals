@@ -1,25 +1,67 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import Animals from './Animals.js';
+import Footer from './Footer';
+import React from 'react';
+import { animals } from './animalsList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+ class App extends React.Component{
+  state = {
+    animals: animals,
+    searchInput:''
+  }
+
+
+  closeHandler = (name) => {
+    const updatedArray = this.state.animals.filter(animal => animal.name!==name);
+    this.setState({
+      animals: updatedArray
+    })
+ }
+
+  likeHandler=(name,action)=>{
+    this.setState((prevState =>{
+      const updatedArray = prevState.animals.map((animal)=>{
+        if(animal.name === name ){
+          if(action==='add'){
+            return{...animal, likes:animal.likes + 1}
+          }else{
+            return{...animal, likes:animal.likes - 1}
+          }
+        }else{ 
+          return animal
+        }
+      })
+      return{
+        animals:updatedArray
+      }
+    }))
+
+  } 
+  searchHandler=(e)=>{
+this.setState({
+searchInput: e.target.value
+})
+
+  }
+
+  render() {
+    return (
+      <div>
+      <Header />
+      <Animals 
+      animals={this.state.animals} 
+      closeHandler={this.closeHandler} 
+      likeHandler={this.likeHandler}
+      searchHandler ={this.searchHandler}
+      searchInput={this.state.searchInput}
+      />
+      <Footer/>
+
+         </div>
+    )
+  }
 }
 
 export default App;
