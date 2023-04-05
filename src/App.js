@@ -9,7 +9,7 @@ import { animals } from './animalsList';
  class App extends React.Component{
   state = {
     animals: animals,
-    searchInput:''
+    searchInput: ''
   }
 
 
@@ -49,12 +49,12 @@ searchInput: e.target.value
   render() {
     return (
       <div>
-      <Header />
+      <Header searchHandler ={this.searchHandler} />
       <Animals 
       animals={this.state.animals} 
       closeHandler={this.closeHandler} 
       likeHandler={this.likeHandler}
-      searchHandler ={this.searchHandler}
+      
       searchInput={this.state.searchInput}
       />
       <Footer/>

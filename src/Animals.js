@@ -9,8 +9,7 @@ const Animals = (props) => {
     return animal.name.includes(props.searchInput)
   })
 
-  const AnimalsCards = props.animals.map((animal =>{
-    
+  const AnimalsCards = searchFilter.map((animal =>{
       return <Card 
       key={animal.name}
       name = {animal.name}
@@ -18,8 +17,11 @@ const Animals = (props) => {
       closeCard={()=>props.closeHandler(animal.name)}
       addLikes={()=>props.likeHandler(animal.name,'add')}
       removeLikes={()=>props.likeHandler(animal.name,'remove')}/>;} ))
+
+
   return(
     <div className='allCards'>
+      <h4>Animals {props.animals.length}</h4>
     {AnimalsCards} 
   </div>
   );
