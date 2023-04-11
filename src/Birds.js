@@ -10,9 +10,9 @@ const Birds = (props) => {
     key={bird.name}
     name={bird.name}
     counter={bird.likes}
-    closeCard={()=>props.closeHandler(bird.name)}
-    addLikes={()=>props.likeHandler(bird.name,'add')}
-    removeLikes={()=>props.likeHandler(bird.name,'remove')}/>
+    closeCard={()=>props.closeHandler("birds",bird.name)}
+    addLikes={()=>props.likeHandler("birds",bird.name,'add')}
+    removeLikes={()=>props.likeHandler("birds",bird.name,'remove')}/>
   }))
 
   return (

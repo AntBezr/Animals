@@ -23,7 +23,7 @@ import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
     this.setState({
       animals: updatedArray
     })
-  }else{
+  }else if(arr ==="birds"){
     const updatedArray = this.state.birds.filter(bird => bird.name!==name);
     this.setState({
       birds: updatedArray
@@ -31,8 +31,8 @@ import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
 }
  }
 
-  likeHandler=(name,action)=>{
-    this.setState((prevState =>{
+  likeHandler=(arr,name,action)=>{
+    if(arr === "animals"){this.setState((prevState =>{
       const updatedArray = prevState.animals.map((animal)=>{
         if(animal.name === name ){
           if(action==='add'){
@@ -48,6 +48,25 @@ import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
         animals:updatedArray
       }
     }))
+  }else if(arr === "birds"){
+    this.setState((prevState =>{
+      const updatedArray = prevState.birds.map((bird)=>{
+        if(bird.name === name ){
+          if(action==='add'){
+            return{...bird, likes:bird.likes + 1}
+          }else{
+            return{...bird, likes:bird.likes - 1}
+          }
+        }else{ 
+          return bird
+        }
+      })
+      return{
+        birds:updatedArray
+      }
+    }))
+  }
+    
   } 
 
   searchHandler=(e)=>{
