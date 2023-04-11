@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   background-image: linear-gradient(to bottom,#d6d6ff,#609063);
+  min-height: calc(100vh - 9rem - 150px );
 }
 .allCards h4 {
   width: 100vw;

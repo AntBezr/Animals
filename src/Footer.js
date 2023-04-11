@@ -1,10 +1,12 @@
 import React from 'react';
+import './Footer.css'
 
 function Footer(props) {
   return (
-    <div>
-      footer will be here
-    </div>
+    <footer>
+      <small>React23K Anton Bezruchenkov ©</small>
+      
+    </footer>
   );
 }
 

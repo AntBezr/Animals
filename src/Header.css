@@ -6,6 +6,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 9rem; 
 }
 header h2 {
   margin: 0;
