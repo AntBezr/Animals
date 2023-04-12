@@ -1,5 +1,6 @@
 import React from 'react';
-import Card from './Card';
+import Card from '../UI/Card';
+import Search from '../UI/Search';
 import "./Birds.css"
 
 const Birds = (props) => {
@@ -20,7 +21,7 @@ const Birds = (props) => {
       
        <div className="input">
          <p>Type bird name</p>
-         <input onChange={props.searchHandler}></input>
+        <Search/>
        </div>
 {BirdsCards}
     </div>

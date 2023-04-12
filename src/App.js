@@ -1,10 +1,10 @@
 import './App.css';
-import Header from './Header';
-import Animals from './Animals.js';
-import Birds from './Birds.js';
-import About from './About.js';
-import Landing from './Landing.js';
-import Footer from './Footer';
+import Header from './components/Header';
+import Animals from './pages/Animals.js';
+import Birds from './pages/Birds.js';
+import About from './pages/About.js';
+import Landing from './pages/Landing.js';
+import Footer from './components/Footer';
 import React from 'react';
 import { animals } from './animalsList';
 import { birds } from './animalsList';
