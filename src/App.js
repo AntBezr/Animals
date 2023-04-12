@@ -3,6 +3,7 @@ import Header from './Header';
 import Animals from './Animals.js';
 import Birds from './Birds.js';
 import About from './About.js';
+import Landing from './Landing.js';
 import Footer from './Footer';
 import React from 'react';
 import { animals } from './animalsList';
@@ -79,23 +80,26 @@ import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
     return (
     <BrowserRouter>
       <div>
-        <Header searchHandler ={this.searchHandler} />
-        <Link to='/animals'><img src="https://source.unsplash.com/500x400/?frog"/></Link>
-        <Link to="/birds"><img src="https://source.unsplash.com/500x400/?birds"/></Link>
+        <Header animals={this.state.animals} 
+        birds={this.state.birds} />
+        
         <Routes>
           <Route path='/' element={<App/>}/>
           <Route path='/animals' element={<Animals 
             animals={this.state.animals} 
             closeHandler={this.closeHandler} 
             likeHandler={this.likeHandler}
-            searchInput={this.state.searchInput}/>}/>
+            searchInput={this.state.searchInput}
+            searchHandler ={this.searchHandler} />}/>
 
           <Route path='/birds' element={<Birds
             birds={this.state.birds}
             closeHandler={this.closeHandler} 
             likeHandler={this.likeHandler}
-            searchInput={this.state.searchInput}/>}/>
+            searchInput={this.state.searchInput}
+            searchHandler ={this.searchHandler} />}/>
           <Route path="/about" element={<About/>}/>
+          <Route path="/landing" element={<Landing/>}/>
         </Routes>
         <Footer/>
       </div>

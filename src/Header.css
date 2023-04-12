@@ -1,12 +1,13 @@
 header {
   margin: 0;
   padding: 0;
-  background-color:#d6d6ff;
+  background-color:black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 9rem; 
+  font-family: 'Manrope', sans-serif;
 }
 header h2 {
   margin: 0;
@@ -19,9 +20,36 @@ header h2 {
   align-items: center;
   justify-content: space-between;
   width: 300px;
+  color: white;
 }
 
 input{
 height: 1rem;
 border-radius: 5px;
+}
+
+
+nav{
+  width: 50vw;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+li{
+  margin: 1rem 0;
+ font-size: 1.5rem;
+}
+a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+}
+a.active{
+  text-decoration:underline;
+  color: white;
+  
 }

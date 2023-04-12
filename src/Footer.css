@@ -1,5 +1,5 @@
 footer {
-  background-color: #609063;
+  background-color: black;
 height: 150px;
 display: flex;
 flex-direction: column;
@@ -11,4 +11,5 @@ small{
  display: flex;
  align-self: center;
  justify-content: end;
+ color: white;
 }

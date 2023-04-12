@@ -17,7 +17,11 @@ const Birds = (props) => {
 
   return (
     <div className='allCards'>
-      <h4>Birds {props.birds.length}</h4>
+      
+       <div className="input">
+         <p>Type bird name</p>
+         <input onChange={props.searchHandler}></input>
+       </div>
 {BirdsCards}
     </div>
   );

@@ -3,10 +3,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-image: linear-gradient(to bottom,#d6d6ff,#609063);
+  background-color: black;
   min-height: calc(100vh - 9rem - 150px );
 }
-.allCards h4 {
+.input {
   width: 100vw;
-  text-align: center;
+  justify-content: center;
 }

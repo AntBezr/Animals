@@ -20,8 +20,16 @@ const Animals = (props) => {
 
 
   return(
+    
     <div className='allCards'>
-      <h4>Animals {props.animals.length}</h4>
+      
+       <div className='input'> <div className="input">
+         <p>Type animal name</p> <input onChange={props.searchHandler}></input>
+       </div>
+    </div>
+     
+     
+    
     {AnimalsCards} 
   </div>
   );
