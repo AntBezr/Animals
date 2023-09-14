@@ -14,21 +14,20 @@ const Animals = (props) => {
       key={animal.name}
       name = {animal.name}
       counter = {animal.likes}
-      closeCard={()=>props.closeHandler('animals',animal.name)}
-      addLikes={()=>props.likeHandler('animals',animal.name,'add')}
-      removeLikes={()=>props.likeHandler('animals',animal.name,'remove')}/>;} ))
+      closeCard={()=>props.closeHandler(props.title,animal.name)}
+      addLikes={()=>props.likeHandler(props.title,animal.name,'add')}
+      removeLikes={()=>props.likeHandler(props.title,animal.name,'remove')}/>;} ))
 
 
   return(
     
     <div className='allCards'>
-      
-       <div className='input'> <div className="input">
+    
+      <h2>{props.title} ({props.animals.length})</h2>
+       <div> <div className="input">
          <p>Type animal name</p> <input onChange={props.searchHandler}></input>
        </div>
     </div>
-     
-     
     
     {AnimalsCards} 
   </div>

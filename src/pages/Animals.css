@@ -9,4 +9,9 @@
 .input {
   width: 100vw;
   justify-content: center;
+  align-items: center;
+}
+h2{
+  color: white;
+  text-transform: capitalize;
 }

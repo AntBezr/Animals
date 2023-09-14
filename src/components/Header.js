@@ -7,10 +7,10 @@ const Header = (props) => {
     <header >
       <nav>
         <ul>
-          <li><NavLink to="/landing" activeClassName='isActive'>Home</NavLink></li>
-          <li><NavLink to="/birds" activeClassName='isActive'>Birds({props.birds.length})</NavLink></li>
-          <li><NavLink to="/animals"activeClassName='isActive'>Animals({props.animals.length})</NavLink></li>
-          <li><NavLink to="/about" activeClassName='isActive'>About</NavLink></li>
+          <li><NavLink to="/landing" /* ='isActive' */>Home</NavLink></li>
+          <li><NavLink to="/birds" /* ='isActive' */>Birds({props.birds.length})</NavLink></li>
+          <li><NavLink to="/animals"/* ='isActive' */>Animals({props.animals.length})</NavLink></li>
+          <li><NavLink to="/about" /* ='isActive' */>About</NavLink></li>
       </ul>
       </nav>
      

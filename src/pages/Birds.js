@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from '../UI/Card';
-import Search from '../UI/Search';
 import "./Birds.css"
 
 const Birds = (props) => {
@@ -11,17 +10,17 @@ const Birds = (props) => {
     key={bird.name}
     name={bird.name}
     counter={bird.likes}
-    closeCard={()=>props.closeHandler("birds",bird.name)}
-    addLikes={()=>props.likeHandler("birds",bird.name,'add')}
-    removeLikes={()=>props.likeHandler("birds",bird.name,'remove')}/>
+    closeCard={()=>props.closeHandler(props.title,bird.name)}
+    addLikes={()=>props.likeHandler(props.title,bird.name,'add')}
+    removeLikes={()=>props.likeHandler(props.title,bird.name,'remove')}/>
   }))
 
   return (
     <div className='allCards'>
+      <h2>{props.title} ({props.birds.length})</h2>
       
        <div className="input">
          <p>Type bird name</p>
-        <Search/>
        </div>
 {BirdsCards}
     </div>
